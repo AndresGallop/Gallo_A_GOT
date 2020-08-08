@@ -39,7 +39,8 @@
 
       playbutton = document.querySelector(".fa-play-circle"),
       backbutton = document.querySelector(".fa-backward"),
-      forwardbutton = document.querySelector(".fa-forward");
+      forwardbutton = document.querySelector(".fa-forward"),
+      undo = document.querySelector(".fa-undo");
 
 
 
@@ -58,11 +59,6 @@
 
   }
 
-  else if (prover = 2){
-
-    lbVideo.pause();
-  }
-
   else {
     //lightbox is open and we want the video to stop and rewind when we close it
     lbVideo.currentTime = 0;
@@ -73,6 +69,11 @@
   //rewind the video and make it pause at currentTime of 0
 }
 
+function again(){
+  lbVideo.currentTime = 0;
+  lbVideo.pause();
+}
+
 
 function playandpause(){
 
@@ -80,16 +81,28 @@ function playandpause(){
 
     console.log("play");
     lbVideo.play();
-
-
 }
 
   else {
     lbVideo.pause();
     console.log("paused");
-    prover = 2;
+}
+}
+
+function restarVideo (){
+
+  lbVideo.currentTime = 0;
+}
+
+function forward(){
+
+lbVideo.currentTime += 10;
 
 }
+
+function backward(){
+
+lbVideo.currentTime -= 10;
 }
 
 function animateBanner() {
@@ -112,11 +125,15 @@ function animateBanner() {
 
   sigils.forEach(sigil => sigil.addEventListener("click", animateBanner));
   sigils.forEach(sigil => sigil.addEventListener('click', showHideLightbox));
+  undo.addEventListener("click", restarVideo);
+  forwardbutton.addEventListener("click", forward);
+  backbutton.addEventListener("click", backward);
 
   playbutton.addEventListener("click", playandpause);
 
-
   lbClose.addEventListener("click", showHideLightbox);
+  lbClose.addEventListener("click", again);
+
 
   //add
   lbVideo.addEventListener("ended", showHideLightbox);
