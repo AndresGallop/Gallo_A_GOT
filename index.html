@@ -20,21 +20,17 @@
   <i class="fas fa-backward"></i>
   <i class="fas fa-play-circle"></i>
   <i class="fas fa-undo"></i>
-  <i class="fas fa-forward"></i>
+  <i class="fas fa-forward"></i><br>
+
+  <input id="vol-control" type="range" min="0" max="100" step="1" oninput="sound(this.value)" onchange="sound(this.value)"></input>
 
 </section>
 <!-- end video controls-->
 
 
   <video src="video/House-Stark.mp4" data-offset="0"></video>
-  <video src="video/House-baratheon.mp4" data-offset="1"></video>
-  <video src="video/House-lannister.mp4" data-offset="2"></video>
-  <video src="video/House-tully.mp4" data-offset="3"></video>
-  <video src="video/House-greyjoy.mp4" data-offset="4"></video>
-  <video src="video/House-arryn.mp4" data-offset="5"></video>
-  <video src="video/House-targaryen.mp4" data-offset="6"></video>
-  <video src="video/House-tyrell.mp4" data-offset="7"></video>
-  <video src="video/House-frey.mp4" data-offset="8"></video>
+
+
 
 </section>
 
@@ -55,15 +51,15 @@
     <nav id="bottomNav">
     	<ul id="navList">
         	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
-            <li><div class="sigilContainer stark" data-offset="0"></div></li>
-            <li><div class="sigilContainer baratheon" data-offset="1"></div></li>
-            <li><div class="sigilContainer lannister" data-offset="2"></div></li>
-            <li><div class="sigilContainer tully" data-offset="3"></div></li>
-            <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
-            <li><div class="sigilContainer arryn" data-offset="5"></div></li>
-            <li><div class="sigilContainer tangaryen" data-offset="6"></div></li>
-            <li><div class="sigilContainer tyrell" data-offset="7"></div></li>
-            <li><div class="sigilContainer frey" data-offset="8"></div></li>
+            <li><div class="sigilContainer stark" data-offset="0" data-vid="stark"></div></li>
+            <li><div class="sigilContainer baratheon" data-offset="1" data-vid="baratheon"></div></li>
+            <li><div class="sigilContainer lannister" data-offset="2" data-vid="lannister"></div></li>
+            <li><div class="sigilContainer tully" data-offset="3" data-vid="tully"></div></li>
+            <li><div class="sigilContainer greyjoy" data-offset="4" data-vid="greyjoy"></div></li>
+            <li><div class="sigilContainer arryn" data-offset="5" data-vid="arryn"></div></li>
+            <li><div class="sigilContainer tangaryen" data-offset="6" data-vid="tangaryen"></div></li>
+            <li><div class="sigilContainer tyrell" data-offset="7" data-vid="tyrell"></div></li>
+            <li><div class="sigilContainer frey" data-offset="8" data-vid="frey"></div></li>
         </ul>
     </nav>
 

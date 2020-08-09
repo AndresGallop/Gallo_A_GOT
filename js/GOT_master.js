@@ -39,13 +39,16 @@
       playbutton = document.querySelector(".fa-play-circle"),
       backbutton = document.querySelector(".fa-backward"),
       forwardbutton = document.querySelector(".fa-forward"),
-      undo = document.querySelector(".fa-undo");
+      undo = document.querySelector(".fa-undo"),
+      slider = document.getElementById("slider");
 
 
 
 
   function showHideLightbox() {
     setTimeout(function(){lightBox.classList.toggle('show-lightbox');}, 1000);
+
+    lbVideo.src = `video/House${this.dataset.vid}.mp4`;
 
   //Try Making the video play as well
 
@@ -102,6 +105,13 @@ lbVideo.currentTime += 10;
 function backward(){
 
 lbVideo.currentTime -= 10;
+}
+
+
+window.sound = function(volumen){
+  
+    let slider = document.querySelector('video');
+    slider.volume = volumen / 100;
 }
 
 function animateBanner() {

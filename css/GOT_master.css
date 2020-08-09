@@ -48,6 +48,12 @@ main {
 	cursor:pointer;
 }
 
+input{
+  width: 200px;
+  margin-right: 150px;
+
+}
+
 /* ----- end default styles ----- */
 
 /* ----- image sprite ----- */
@@ -173,5 +179,5 @@ video {
 }
 
 .fa-undo{
-  font-size: 0.8em; 
+  font-size: 0.8em;
 }
